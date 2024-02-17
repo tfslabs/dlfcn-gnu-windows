@@ -239,5 +239,6 @@ tmptest.c
 tmptest.dll
 
 
-# Ignore bin folder
+# Ignore build folders
 .bin
+.cmake
