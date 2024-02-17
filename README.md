@@ -1,31 +1,25 @@
 # Dynamic Linking Extension for GNU Windows
 
-## Using This Library
+Dynamic Linking Extension for GNU Windows is an extension for dynamic linking of C++ programs on the Microsoft Windows platform.
 
-### Using CMake
+You're not required to install this with your compiler, but it can be useful if you want to use the DLLs provided.
 
-Once the library has been installed, add to your project `CMakeLists.txt` :
+## Build this library
 
-```cmake
-...
-find_package(dlfcn-win32 REQUIRED)
-...
-target_link_libraries(<target> dlfcn-win32::dl)
-...
+To build this library, you will need:
+
+* [GNU Windows](https://github.com/tfslabs/gnu-windows)
+* [CMake](https://www.cmake.org/) version 3 or newer installed on your machine. You can download it from the official website and follow their installation instructions.
+* [Python 3.9+](https://python.org)
+
+> :warning:
+>
+> Make sure you can run `make`, `gcc`  and `g++` from the command line without any issues.
+
+Just run the  following commands in a terminal window to get started:
+
+```cmd
+build.cmd
 ```
 
-If you want to use this library in a cross-platform project, a convenient way
-to proceed is to define the CMake variable [`CMAKE_DL_LIBS`](https://cmake.org/cmake/help/latest/variable/CMAKE_DL_LIBS.html) (that is normally empty on Windows) and then use it for linking:
-
-```cmake
-...
-if (WIN32)
-  find_package(dlfcn-win32 REQUIRED)
-  set(CMAKE_DL_LIBS dlfcn-win32::dl)
-endif ()  
-...
-target_link_libraries(<target> ${CMAKE_DL_LIBS})
-...
-```
-
-When cross-compiling you might want to set [`CMAKE_CROSSCOMPILING_EMULATOR`](https://cmake.org/cmake/help/latest/variable/CMAKE_CROSSCOMPILING_EMULATOR.html) to the path of wine to run tests.
+Once it's done, you can see your bootstrap of Dynamic Linking Extension `.bin`. You can then paste it into your GNU Windows installation folder.
