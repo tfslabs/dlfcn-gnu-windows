@@ -237,3 +237,7 @@ FakesAssemblies/
 # test files produced by ./configure
 tmptest.c
 tmptest.dll
+
+
+# Ignore bin folder
+.bin
