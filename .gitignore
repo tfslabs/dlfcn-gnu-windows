@@ -241,4 +241,5 @@ tmptest.dll
 
 # Ignore build folders
 .bin
+.aip
 .cmake
