@@ -1,7 +1,7 @@
 > Welcome to GNU Windows
-> 
-> This dlfcn requires GNU Windows builds to be installed.
-> 
+>
+> This dlfcn requires GNU Windows builds to be installed. Can use `build.cmd` to run `cmake` build automatically
+>
 > Additional build/lib need to be installed (put all into the GNU Windows `bin` folder):
 > + `cmake`
 
