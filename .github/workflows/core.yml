@@ -22,7 +22,7 @@ jobs:
 
       - name: Obtain source code from https://repo.msys2.org/mingw/sources/
         run: |
-          wget https://repo.msys2.org/mingw/sources/mingw-w64-dlfcn-1.4.1-1.src.tar.zst -O mingw-w64-dlfcn-1.4.1-1.src.tar.zst
+          wget https://repo.msys2.org/mingw/sources/mingw-w64-dlfcn-1.4.1-1.src.tar.zst
 
       - name: Extract Source Code into Root Directory
         run: tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar.zst
