@@ -3,7 +3,7 @@ name: GNU Windows extension extractor for GitHub Actions
 on:
   push:
     branches:
-      - no-available-just-rename-in-case-you-want
+      - 1.4.1-1
 
 permissions:
   contents: write
@@ -22,16 +22,16 @@ jobs:
 
       - name: Obtain source code from https://repo.msys2.org/mingw/sources/
         run: |
-          wget https://frippery.org/files/busybox/busybox-w32-FRP-5467-g9376eebd8.tgz -O busybox-w32-FRP-5467-g9376eebd8.tgz
+          wget https://repo.msys2.org/mingw/sources/mingw-w64-dlfcn-1.4.1-1.src.tar.zst -O mingw-w64-dlfcn-1.4.1-1.src.tar.zst
 
       - name: Extract Source Code into Root Directory
-        run: tar --strip-components=1 -xf busybox-w32-FRP-5467-g9376eebd8.tgz
+        run: tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar.zst
 
       - name: Commit Changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          rm busybox-w32-FRP-5467-g9376eebd8.tgz
+          rm mingw-w64-dlfcn-1.4.1-1.src.tar.zst
           rm .gitignore
           rm -rf .github/workflows/*.yml
           git add .
