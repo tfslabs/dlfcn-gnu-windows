@@ -17,24 +17,24 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Zstandard for Extraction
-        run: sudo apt install -y xz-utils zstd tar
+      - name: Install Tar for Extraction
+        run: sudo apt install -y xz-utils tar
 
       - name: Obtain source code from https://repo.msys2.org/mingw/sources/
         run: |
           wget https://repo.msys2.org/mingw/sources/mingw-w64-dlfcn-1.4.1-1.src.tar.zst
 
       - name: Extract Source Code into Root Directory
-        run: | 
-          zstd -d mingw-w64-dlfcn-1.4.1-1.src.tar.zst
-          tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar
+        run: |
+          tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar.zst
+          tar --strip-components=1 -xf dlfcn-1.4.1.tar.gz
 
       - name: Commit Changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           rm mingw-w64-dlfcn-1.4.1-1.src.tar.zst
-          rm mingw-w64-dlfcn-1.4.1-1.src.tar
+          rm dlfcn-1.4.1.tar.gz
           rm .gitignore || true
           rm -rf .github/workflows/*.yml || true
           git add .
