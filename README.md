@@ -1,4 +1,7 @@
-dlfcn-win32 [![Build status](https://ci.appveyor.com/api/projects/status/celmbkqj0k41fk04/branch/master?svg=true)](https://ci.appveyor.com/project/dlfcn-win32/dlfcn-win32/branch/master)
+> Welcome to GNU Windows
+> This dlfcn requires GNU Windows builds to be installed.
+> Additional build/lib need to be installed (put all into the GNU Windows `bin` folder):
+> + `cmake`
 ===========
 
 dlfcn-win32 is an implementation of dlfcn for Windows.
