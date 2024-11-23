@@ -32,8 +32,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           rm mingw-w64-dlfcn-1.4.1-1.src.tar.zst
-          rm .gitignore
-          rm -rf .github/workflows/*.yml
+          rm .gitignore || true
+          rm -rf .github/workflows/*.yml || true
           git add .
           git commit -m "GNU Windows extension extractor for GitHub Actions"
           git push
