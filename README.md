@@ -1,8 +1,9 @@
 > Welcome to GNU Windows
+> 
 > This dlfcn requires GNU Windows builds to be installed.
+> 
 > Additional build/lib need to be installed (put all into the GNU Windows `bin` folder):
 > + `cmake`
-===========
 
 dlfcn-win32 is an implementation of dlfcn for Windows.
 
