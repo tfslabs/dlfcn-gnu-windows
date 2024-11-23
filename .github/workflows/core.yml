@@ -26,7 +26,7 @@ jobs:
 
       - name: Extract Source Code into Root Directory
         run: | 
-          tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar.zst
+          zstd -d mingw-w64-dlfcn-1.4.1-1.src.tar.zst
           tar --strip-components=1 -xf mingw-w64-dlfcn-1.4.1-1.src.tar
 
       - name: Commit Changes
